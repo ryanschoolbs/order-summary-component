@@ -15,16 +15,17 @@ body {
    display: flex;
    align-items: center;
    justify-content: center;
+   overflow: hidden;
    height: 100vh;
 }
 
 .card {
-   width: 450px;
+   max-width: 450px;
 
    border-radius: 20px;
    overflow: hidden;
    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-   /* outline: red solid 1px; */
+
    background-color: white;
 }
 
@@ -47,7 +48,6 @@ body {
 }
 
 .plan {
-   /* outline: 1px solid red; */
    background-color: rgb(236, 236, 241);
    border-radius: 10px;
    margin-top: 1.5rem;
@@ -125,4 +125,41 @@ footer {
 }
 .attribution a {
    color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 1024px) {
+   /* body {
+      overflow: scroll;
+   } */
+   .card {
+      max-width: 380px;
+      display: block;
+   }
+}
+
+@media (max-width: 768px) {
+   body {
+      overflow: scroll;
+   }
+   .card {
+      max-width: 340px;
+      display: block;
+   }
+
+   footer {
+      display: none;
+   }
+}
+
+@media (max-width: 576px) {
+   /* mobile  */
+
+   body {
+      font-size: 0.8rem;
+   }
+
+   .content {
+      padding: 2rem;
+      padding-top: 0.6rem;
+   }
 }
