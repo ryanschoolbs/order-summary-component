@@ -8,7 +8,8 @@
 
 body {
    font-family: "Red Hat Display", sans-serif;
-   font-size: 1rem;
+
+   font-size: clamp(1rem, 0.8571428571428572rem + 0.7142857142857143vw, 1.5rem);
    background-image: url("./images/pattern-background-desktop.svg");
    background-repeat: no-repeat;
    background-color: hsl(225, 100%, 94%);
@@ -38,6 +39,8 @@ body {
    text-align: center;
    font-weight: 900;
    margin: 1rem 0;
+
+   font-size: clamp(1rem, 0.8rem + 2vw, 2rem);
 }
 
 .content > p {
@@ -128,9 +131,6 @@ footer {
 }
 
 @media (max-width: 1024px) {
-   /* body {
-      overflow: scroll;
-   } */
    .card {
       max-width: 380px;
       display: block;
@@ -141,9 +141,14 @@ footer {
    body {
       overflow: scroll;
    }
+
    .card {
       max-width: 340px;
       display: block;
+   }
+
+   .content h1 {
+      margin-top: 0;
    }
 
    footer {
@@ -153,10 +158,6 @@ footer {
 
 @media (max-width: 576px) {
    /* mobile  */
-
-   body {
-      font-size: 0.8rem;
-   }
 
    .content {
       padding: 2rem;
